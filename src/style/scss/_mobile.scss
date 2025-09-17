@@ -1,0 +1,667 @@
+@use "./variable/variable" as *;
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    /* 4. Add accessible line-height */
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+* {
+    font-family: "Work Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+    background-color: $header-background-color;
+    padding: 11px 22px;
+    position: relative;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            font-size: large;
+            font-weight: bolder;
+            color: $primary-color;
+        }
+
+        .menu-icon {
+            height: 30px;
+            width: auto;
+        }
+
+        .nav-items {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            padding: 22px 28px;
+            list-style: none;
+            color: $neutral-900;
+            background-color: $neutral-100;
+
+            li:hover {
+                color: $secondary-color;
+            }
+        }
+
+        .menu-icon:hover + .nav-items {
+            display: block;
+        }
+    }
+}
+
+.hero {
+    .hero-text {
+        min-height: 30vh;
+        background:
+            linear-gradient(90deg, rgba(255, 255, 255, 0.9) 16.58%, rgba(255, 255, 255, 0) 72.38%),
+            url("/assets/hero-background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        span {
+            font-weight: 600;
+            font-size: x-large;
+            width: 80%;
+        }
+    }
+    .feature-projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-color;
+        color: white;
+        text-align: center;
+        gap: 12px;
+        padding-top: 18px;
+
+        .heading {
+            font-weight: bold;
+        }
+
+        .content {
+            font-size: large;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            width: 100%;
+            button {
+                width: 50%;
+                border: none;
+                background-color: $neutral-800;
+                color: white;
+                padding: 8px;
+
+                &:first-child {
+                    border-right: white solid 2px;
+                }
+            }
+        }
+    }
+}
+
+.reputation-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    .heading {
+        font-weight: bold;
+    }
+
+    & > .heading {
+        font-size: x-large;
+        font-weight: 900;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border: $neutral-100 solid 1.4px;
+            padding: 24px;
+            border-radius: 4px;
+
+            img.logo {
+                width: 28px;
+                height: auto;
+            }
+
+            .content {
+                color: $neutral-400;
+            }
+        }
+    }
+}
+.about-section {
+    img {
+        display: none;
+    }
+}
+.about-us {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 32px;
+    background-color: $primary-color;
+    color: white;
+
+    .heading {
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    button {
+        padding: 12px;
+        font-weight: bold;
+        color: $primary-color;
+    }
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    background-color: $neutral-50;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 24px;
+
+    .heading {
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            padding: 20px 60px;
+            background-color: white;
+            box-shadow: 0px 0px 37px -2px rgba(17, 24, 39, 0.05);
+            border-radius: 4px;
+            color: $primary-color;
+            font-weight: bold;
+            img.logo {
+                width: 30px;
+                height: auto;
+            }
+
+            hr {
+                width: 50%;
+                height: 2px;
+                color: $neutral-100;
+            }
+        }
+
+        .card:nth-child(2n) {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+}
+
+.experience {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding: 32px;
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .heading {
+            font-size: xx-large;
+            font-weight: bold;
+            color: $primary-color;
+        }
+        .content {
+            color: $neutral-600;
+        }
+
+        button {
+            border: none;
+            background-color: $primary-color;
+            color: white;
+            padding: 16px;
+        }
+    }
+
+    .left {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+        .card {
+            padding: 12px;
+            position: relative;
+            background: #ffffff;
+            border: 1px solid #ffffff;
+            box-shadow:
+                0px 12px 16px -4px rgba(17, 24, 39, 0.1),
+                0px 4px 6px -2px rgba(17, 24, 39, 0.05);
+            border-radius: 4px;
+
+            .value {
+                font-size: xx-large;
+                font-weight: bold;
+            }
+            .text {
+                padding: 0px 8px;
+                color: $neutral-600;
+                border-left: $secondary-color solid 4px;
+                margin-left: 8px;
+            }
+
+            img.icon {
+                width: 50px;
+                height: auto;
+                position: absolute;
+            }
+
+            &:nth-child(1) {
+                position: relative;
+                top: 15%;
+                left: 15%;
+
+                img.icon {
+                    top: -25%;
+                    left: -25%;
+                }
+            }
+            &:nth-child(2) {
+                position: relative;
+                top: -15%;
+                left: -15%;
+                img.icon {
+                    top: -25%;
+                    right: -25%;
+                }
+            }
+            &:nth-child(3) {
+                position: relative;
+                top: 15%;
+                left: 15%;
+                img.icon {
+                    top: 70%;
+                    right: -25%;
+                }
+            }
+            &:nth-child(4) {
+                position: relative;
+                top: -15%;
+                left: -15%;
+                img.icon {
+                    right: -25%;
+                    top: 25%;
+                }
+            }
+        }
+    }
+}
+
+.consultation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    gap: 32px;
+    color: white;
+    background:
+        linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/consultation-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .upper-text {
+            font-size: x-large;
+            font-weight: bold;
+        }
+    }
+    .right {
+        button {
+            color: white;
+            background-color: transparent;
+            border: white solid 2px;
+            padding: 16px;
+        }
+    }
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+
+    .heading {
+        font-size: x-large;
+        font-weight: bold;
+        color: $neutral-800;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .left {
+            color: $neutral-200;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            li {
+                padding-left: 16px;
+            }
+            li:first-child {
+                color: $primary-color;
+                border-left: $primary-color solid 4px;
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .cards {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                color: white;
+                font-size: small;
+
+                .card {
+                    background-color: $primary-color;
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        padding: 8px;
+
+                        .name {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .page-selector {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+
+                .pages {
+                    display: flex;
+                    gap: 6px;
+
+                    li {
+                        list-style: none;
+                        width: 10px;
+                        height: 10px;
+                        background-color: $neutral-100;
+                        border-radius: 100%;
+
+                        &:first-child {
+                            background-color: $primary-color;
+                        }
+                    }
+                }
+                button {
+                    flex: 1;
+                    border: none;
+                    background-color: $neutral-800;
+                    color: white;
+                    padding: 10px;
+                    font-size: small;
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    background-color: $neutral-50;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    gap: 20px;
+
+    .heading {
+        font-weight: bold;
+        font-size: large;
+        color: $neutral-800;
+    }
+
+    .description {
+        color: $neutral-800;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input,
+        textarea {
+            color: $neutral-400;
+            border: $neutral-100 solid 2px;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .group3 {
+            align-self: normal;
+            textarea {
+                min-height: 150px;
+            }
+            .info {
+                font-size: smaller;
+                color: $neutral-600;
+            }
+        }
+
+        button {
+            color: white;
+            background-color: $primary-color;
+            border: none;
+            padding: 12px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 32px;
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        font-size: large;
+        font-weight: bolder;
+        color: $primary-color;
+    }
+
+    .left {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 18px;
+        .label {
+            color: $primary-color;
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .label {
+            color: $primary-color;
+        }
+        .subscribe {
+            display: flex;
+
+            input {
+                border: none;
+                border: $neutral-100 solid 2px;
+                padding: 8px 0px 8px 8px;
+                color: $neutral-400;
+            }
+            button {
+                background-color: $secondary-color;
+                border: none;
+                color: #ffffff;
+            }
+        }
+        .social {
+            .icons {
+                margin-top: 8px;
+                display: flex;
+                gap: 16px;
+                img {
+                    width: 30px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    padding: 24px;
+    background-color: $primary-color;
+    color: #ffffff;
+}

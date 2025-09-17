@@ -114,8 +114,7 @@ header nav .nav-items {
 header nav .nav-items li:hover {
   color: #f9995d;
 }
-header nav .menu-icon:hover + .nav-items,
-header nav .nav-items:hover {
+header nav .menu-icon:hover + .nav-items {
   display: block;
 }
 
@@ -206,6 +205,10 @@ header nav .nav-items:hover {
   color: #858ead;
 }
 
+.about-section img {
+  display: none;
+}
+
 .about-us {
   display: flex;
   flex-direction: column;
@@ -260,6 +263,8 @@ header nav .nav-items:hover {
   background-color: white;
   box-shadow: 0px 0px 37px -2px rgba(17, 24, 39, 0.05);
   border-radius: 4px;
+  color: #2947a9;
+  font-weight: bold;
 }
 .services .cards .card img.logo {
   width: 30px;
@@ -413,7 +418,7 @@ header nav .nav-items:hover {
   gap: 32px;
 }
 .projects .main .left {
-  color: #858ead;
+  color: #c2c7d6;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -490,6 +495,7 @@ header nav .nav-items:hover {
 .contact .heading {
   font-weight: bold;
   font-size: large;
+  color: #292e3d;
 }
 .contact .description {
   color: #292e3d;
@@ -511,15 +517,17 @@ header nav .nav-items:hover {
   color: #858ead;
   border: #eff0ef solid 2px;
   padding: 8px;
+  border-radius: 4px;
 }
 .contact form .group3 {
-  gap: 2px;
+  align-self: normal;
 }
 .contact form .group3 textarea {
   min-height: 150px;
 }
 .contact form .group3 .info {
   font-size: smaller;
+  color: #525b7a;
 }
 .contact form button {
   color: white;
@@ -566,6 +574,7 @@ footer .right .subscribe input {
   border: none;
   border: #eff0ef solid 2px;
   padding: 8px 0px 8px 8px;
+  color: #858ead;
 }
 footer .right .subscribe button {
   background-color: #f9995d;
@@ -586,6 +595,389 @@ footer .right .social .icons img {
   padding: 24px;
   background-color: #2947a9;
   color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  header nav {
+    padding: 0px 112px;
+  }
+  header nav .logo {
+    gap: 24px;
+    font-size: 30px;
+  }
+  header nav .logo img {
+    width: 38px;
+  }
+  header nav .menu-icon {
+    display: none;
+  }
+  header nav .nav-items {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    background: none;
+    gap: 50px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .hero {
+    position: relative;
+  }
+  .hero .hero-text {
+    min-height: 648px;
+    padding: 0px 112px;
+    justify-content: flex-start;
+  }
+  .hero .hero-text span {
+    font-size: 72px;
+    width: 45%;
+  }
+  .hero .feature-projects {
+    width: 416px;
+    height: 190px;
+    position: absolute;
+    right: 112px;
+    bottom: 0;
+    gap: 20px;
+    padding-top: 26px;
+  }
+  .hero .feature-projects .heading {
+    font-size: 20px;
+  }
+  .hero .feature-projects .content {
+    margin: 0px 52px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .hero .feature-projects button {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .reputation-section {
+    gap: 50px;
+    padding: 60px 216px;
+  }
+  .reputation-section > .heading {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .reputation-section .cards {
+    display: grid;
+    gap: 66px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .reputation-section .cards .card {
+    gap: 18px;
+    padding: 20px 20px 40px 20px;
+  }
+  .reputation-section .cards .card img.logo {
+    width: 37px;
+    height: auto;
+  }
+  .reputation-section .cards .card .heading {
+    font-size: 20px;
+  }
+  .about-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 112px;
+  }
+  .about-section img {
+    display: block;
+    width: 75%;
+    height: auto;
+  }
+  .about-section .about-us {
+    position: absolute;
+    width: 33%;
+    padding: 50px 60px 60px 40px;
+    right: 112px;
+  }
+  .about-section .about-us .heading {
+    font-size: 36px;
+  }
+  .about-section .about-us .content {
+    font-size: 20px;
+  }
+  .about-section .about-us button {
+    width: 60%;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 37px;
+    padding: 16px 20px;
+  }
+  .services {
+    padding: 44px 216px 76px 216px;
+    gap: 36px;
+  }
+  .services .heading {
+    font-size: 36px;
+  }
+  .services .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 98px;
+    row-gap: 48px;
+  }
+  .services .cards .card {
+    padding: 38px 72px;
+  }
+  .services .cards .card img.logo {
+    height: 40px;
+    width: auto;
+  }
+  .services .cards .card .content {
+    font-size: 20px;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .services .cards .card hr {
+    width: 60px;
+    height: 2px;
+  }
+  .experience {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 160px;
+    padding: 200px 120px;
+  }
+  .experience .left .card {
+    padding: 30px;
+    gap: 90px;
+  }
+  .experience .left .card .value {
+    font-size: 72px;
+    font-weight: 600;
+  }
+  .experience .left .card .text {
+    padding-left: 12px;
+    font-size: 24px;
+  }
+  .experience .left .card img.icon {
+    width: 98px;
+  }
+  .experience .left .card:nth-child(1) {
+    position: relative;
+    top: 15%;
+    left: 15%;
+  }
+  .experience .left .card:nth-child(1) img.icon {
+    top: -10%;
+    left: -15%;
+  }
+  .experience .left .card:nth-child(2) {
+    position: relative;
+    top: -50%;
+    left: -15%;
+  }
+  .experience .left .card:nth-child(2) img.icon {
+    top: -10%;
+    right: -10%;
+  }
+  .experience .left .card:nth-child(3) {
+    position: relative;
+    top: 40%;
+    left: 25%;
+  }
+  .experience .left .card:nth-child(3) img.icon {
+    bottom: 0;
+    right: -10%;
+  }
+  .experience .left .card:nth-child(4) {
+    position: relative;
+    top: -15%;
+    left: -30%;
+  }
+  .experience .left .card:nth-child(4) img.icon {
+    right: -10%;
+    top: 0%;
+  }
+  .experience .right {
+    gap: 50px;
+  }
+  .experience .right .heading {
+    font-size: 60px;
+  }
+  .experience .right .content {
+    font-size: 20px;
+  }
+  .experience .right button {
+    font-size: 18px;
+    width: 50%;
+    font-weight: 600;
+  }
+  .consultation {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 112px;
+  }
+  .consultation .left {
+    gap: 30px;
+  }
+  .consultation .left .upper-text {
+    font-size: 36px;
+  }
+  .consultation .left .lower-text {
+    font-size: 24px;
+  }
+  .consultation .right button {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .projects {
+    padding: 88px 112px 138px 112px;
+  }
+  .projects .heading {
+    font-size: 36px;
+  }
+  .projects .main {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .projects .main .left {
+    font-size: 24px;
+  }
+  .projects .main .left li {
+    padding-left: 16px;
+    border-width: 4px;
+    font-weight: 500;
+  }
+  .projects .main .right .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .projects .main .right .cards .card img {
+    width: 384px;
+    height: auto;
+  }
+  .projects .main .right .cards .card .content {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  .projects .main .right .cards .card .content .name {
+    font-size: 20px;
+    font-weight: 700px;
+  }
+  .projects .main .right .cards .card .content .address {
+    font-size: 18px;
+  }
+  .projects .main .right .page-selector {
+    gap: 33px;
+  }
+  .projects .main .right .page-selector .pages {
+    gap: 16px;
+  }
+  .projects .main .right .page-selector .pages li {
+    width: 16px;
+    height: 16px;
+  }
+  .projects .main .right .page-selector button {
+    padding: 21px 108px;
+    font-size: 18px;
+  }
+  .contact {
+    gap: 30px;
+    padding: 60px 0px;
+  }
+  .contact .heading {
+    font-size: 36px;
+  }
+  .contact .description {
+    font-size: 20px;
+    width: 40%;
+  }
+  .contact .contact-form {
+    width: 45%;
+    gap: 20px;
+    align-items: center;
+  }
+  .contact .contact-form input,
+  .contact .contact-form textarea {
+    padding: 10px 8px;
+    font-size: 18px;
+    flex: 1;
+  }
+  .contact .contact-form textarea {
+    align-self: normal;
+  }
+  .contact .contact-form .group1,
+  .contact .contact-form .group2 {
+    flex-direction: row;
+    width: 100%;
+    gap: 32px;
+  }
+  .contact .contact-form .group3 .info {
+    font-size: 16px;
+  }
+  .contact .contact-form button {
+    padding: 16px 104px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  footer {
+    padding: 85px 112px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .label {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  footer .left {
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+    row-gap: 32px;
+    column-gap: 13px;
+  }
+  footer .left .logo {
+    grid-column: 1/span 2;
+    gap: 14px;
+    font-size: 30px;
+    align-self: flex-start;
+  }
+  footer .left .logo img {
+    width: 38px;
+  }
+  footer .left .value {
+    font-size: 20px;
+  }
+  footer .right {
+    gap: 42px;
+  }
+  footer .right .newsletter,
+  footer .right .social {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .right .newsletter .subscribe {
+    gap: 8px;
+  }
+  footer .right .newsletter .subscribe input {
+    font-size: 18px;
+    padding: 10px;
+    width: 280px;
+  }
+  footer .right .newsletter .subscribe button {
+    font-size: 18px;
+    padding: 10px 24px;
+  }
+  footer .right .social .icons {
+    gap: 20px;
+  }
+  footer .right .social .icons img {
+    width: 40px;
+  }
+  .copyright {
+    padding: 28px 112px;
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
