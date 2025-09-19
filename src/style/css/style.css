@@ -228,19 +228,21 @@ header nav .menu-icon:hover + .nav-items {
 }
 .hero .hero-text span {
   font-weight: 600;
-  font-size: x-large;
+  font-size: clamp(24px, 6vw, 40px);
   width: 80%;
 }
 .hero .feature-projects {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #2947a9;
   color: white;
   text-align: center;
   gap: 12px;
   padding-top: 18px;
+  height: 20vh;
+  font-size: clamp(16px, 2vw, 32px);
 }
 .hero .feature-projects .heading {
   font-weight: bold;
@@ -285,10 +287,15 @@ header nav .menu-icon:hover + .nav-items {
 }
 .reputation-section .cards {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 32px;
 }
 .reputation-section .cards .card {
+  min-width: 250px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -324,6 +331,7 @@ header nav .menu-icon:hover + .nav-items {
   font-size: x-large;
 }
 .about-us .content {
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -357,7 +365,7 @@ header nav .menu-icon:hover + .nav-items {
   align-items: center;
 }
 .services .cards .card {
-  width: 100%;
+  min-width: 220px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -388,10 +396,13 @@ header nav .menu-icon:hover + .nav-items {
 .experience {
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
   gap: 40px;
   padding: 32px;
 }
 .experience .right {
+  max-width: 400px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -416,6 +427,7 @@ header nav .menu-icon:hover + .nav-items {
   color: #ffffff;
 }
 .experience .left {
+  max-width: 340px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
@@ -532,9 +544,12 @@ header nav .menu-icon:hover + .nav-items {
 .projects .main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 32px;
 }
 .projects .main .left {
+  align-self: flex-start;
   color: #c2c7d6;
   list-style: none;
   display: flex;
@@ -555,14 +570,20 @@ header nav .menu-icon:hover + .nav-items {
 }
 .projects .main .right .cards {
   text-align: center;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
   gap: 24px;
   color: white;
   font-size: small;
 }
 .projects .main .right .cards .card {
   background-color: #2947a9;
+}
+.projects .main .right .cards .card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .projects .main .right .cards .card .content {
   display: flex;
@@ -721,7 +742,7 @@ footer .right .social .icons img {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   header nav {
     padding: 0px 112px;
   }
@@ -820,6 +841,7 @@ footer .right .social .icons img {
   .about-section .about-us {
     position: absolute;
     width: 33%;
+    max-height: 90%;
     padding: 50px 60px 60px 40px;
     right: 112px;
     align-items: start;
@@ -877,8 +899,11 @@ footer .right .social .icons img {
   .experience {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 160px;
-    padding: 200px 120px;
+    gap: 10%;
+    padding: 15% 120px;
+  }
+  .experience .left {
+    max-width: none;
   }
   .experience .left .card {
     padding: 30px;
@@ -934,6 +959,7 @@ footer .right .social .icons img {
   .experience .right {
     gap: 50px;
     text-align: left;
+    max-width: none;
   }
   .experience .right .heading {
     font-size: 60px;
@@ -1121,6 +1147,14 @@ footer .right .social .icons img {
     padding: 28px 112px;
     font-size: 16px;
     text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  .projects {
+    padding: 80px;
+  }
+  .projects .heading {
+    font-size: 28px;
   }
 }
 

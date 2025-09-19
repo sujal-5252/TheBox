@@ -1,0 +1,466 @@
+@media (min-width: 1100px) {
+  header {
+    nav {
+      padding: 0px 112px;
+
+      .logo {
+        gap: 24px;
+        font-size: 30px;
+        img {
+          width: 38px;
+        }
+      }
+      .menu-icon {
+        display: none;
+      }
+      .nav-items {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        top: 0;
+        background: none;
+        gap: 50px;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .hero {
+    position: relative;
+
+    .hero-text {
+      min-height: 648px;
+      padding: 0px 112px;
+      justify-content: flex-start;
+
+      span {
+        font-size: 72px;
+        width: 45%;
+      }
+    }
+    .feature-projects {
+      width: 416px;
+      height: 190px;
+      position: absolute;
+      right: 112px;
+      bottom: 0;
+      gap: 20px;
+      padding-top: 26px;
+      .heading {
+        font-size: 20px;
+      }
+      .content {
+        margin: 0px 52px;
+        font-size: 24px;
+        font-weight: 400;
+      }
+      button {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .reputation-section {
+    gap: 50px;
+    padding: 60px 216px;
+    & > .heading {
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .cards {
+      display: grid;
+      gap: 66px;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .card {
+        gap: 18px;
+        padding: 20px 20px 40px 20px;
+        align-items: start;
+        text-align: left;
+        img.logo {
+          width: 37px;
+          height: auto;
+        }
+        .heading {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .about-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 112px;
+    img {
+      display: block;
+      width: 75%;
+      height: auto;
+    }
+
+    .about-us {
+      position: absolute;
+      width: 33%;
+      max-height: 90%;
+      padding: 50px 60px 60px 40px;
+      right: 112px;
+      align-items: start;
+      .heading {
+        font-size: 36px;
+      }
+      .content {
+        font-size: 20px;
+        text-align: left;
+      }
+      button {
+        width: 60%;
+        font-size: 18px;
+        border-radius: 6px;
+        border: none;
+        margin-top: 37px;
+        padding: 16px 20px;
+
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .services {
+    padding: 44px 216px 76px 216px;
+    gap: 36px;
+    .heading {
+      font-size: 36px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 98px;
+      row-gap: 48px;
+
+      .card {
+        width: 270px;
+        padding: 38px;
+
+        img.logo {
+          height: 40px;
+          width: auto;
+        }
+
+        .content {
+          font-size: 20px;
+          font-weight: 400;
+          font-optical-sizing: auto;
+          font-style: normal;
+        }
+
+        hr {
+          width: 60px;
+          height: 2px;
+        }
+      }
+    }
+  }
+
+  .experience {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10%;
+    padding: 15% 120px;
+
+    .left {
+      max-width: none;
+      .card {
+        padding: 30px;
+        gap: 90px;
+
+        .value {
+          font-size: 72px;
+          font-weight: 600;
+        }
+        .text {
+          padding-left: 12px;
+          font-size: 24px;
+        }
+
+        img.icon {
+          width: 98px;
+        }
+
+        &:nth-child(1) {
+          position: relative;
+          top: 15%;
+          left: 15%;
+
+          img.icon {
+            top: -10%;
+            left: -15%;
+          }
+        }
+        &:nth-child(2) {
+          position: relative;
+          top: -50%;
+          left: -15%;
+          img.icon {
+            top: -10%;
+            right: -10%;
+          }
+        }
+        &:nth-child(3) {
+          position: relative;
+          top: 40%;
+          left: 25%;
+          img.icon {
+            bottom: 0;
+            right: -10%;
+          }
+        }
+        &:nth-child(4) {
+          position: relative;
+          top: -15%;
+          left: -30%;
+          img.icon {
+            right: -10%;
+            top: 0%;
+          }
+        }
+      }
+    }
+
+    .right {
+      gap: 50px;
+      text-align: left;
+      max-width: none;
+      .heading {
+        font-size: 60px;
+      }
+      .content {
+        font-size: 20px;
+      }
+      button {
+        font-size: 18px;
+        width: 50%;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .consultation {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 112px;
+    text-align: left;
+
+    .left {
+      gap: 30px;
+      .upper-text {
+        font-size: 36px;
+      }
+      .lower-text {
+        font-size: 24px;
+      }
+    }
+
+    .right {
+      button {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .projects {
+    padding: 88px 112px 138px 112px;
+    .heading {
+      font-size: 36px;
+      text-align: left;
+    }
+
+    .main {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .left {
+        font-size: 24px;
+        li {
+          padding-left: 16px;
+          border-width: 4px;
+          font-weight: 500;
+        }
+      }
+
+      .right {
+        .cards {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          .card {
+            text-align: left;
+            img {
+              width: 384px;
+              height: auto;
+            }
+            .content {
+              padding: 12px 16px;
+              gap: 12px;
+              .name {
+                font-size: 20px;
+                font-weight: 700px;
+              }
+              .address {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
+        .page-selector {
+          gap: 33px;
+          .pages {
+            gap: 16px;
+            li {
+              width: 16px;
+              height: 16px;
+            }
+          }
+
+          button {
+            padding: 21px 108px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    gap: 30px;
+    padding: 60px 0px;
+    .heading {
+      font-size: 36px;
+    }
+    .description {
+      font-size: 20px;
+      width: 40%;
+    }
+    .contact-form {
+      width: 45%;
+      gap: 20px;
+      align-items: center;
+
+      input,
+      textarea {
+        padding: 10px 8px;
+        font-size: 18px;
+        flex: 1;
+      }
+
+      textarea {
+        align-self: normal;
+      }
+
+      .group1,
+      .group2 {
+        flex-direction: row;
+        width: 100%;
+        gap: 32px;
+      }
+
+      .group3 {
+        .info {
+          font-size: 16px;
+        }
+      }
+
+      button {
+        padding: 16px 104px;
+        font-size: 18px;
+        font-weight: 600;
+
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 85px 112px;
+    flex-direction: row;
+    justify-content: space-between;
+    .label {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .left {
+      grid-template-columns: auto 1fr;
+      justify-items: start;
+      row-gap: 32px;
+      column-gap: 13px;
+
+      .logo {
+        grid-column: 1 / span 2;
+        gap: 14px;
+        font-size: 30px;
+        align-self: flex-start;
+        img {
+          width: 38px;
+        }
+      }
+
+      .value {
+        font-size: 20px;
+      }
+    }
+
+    .right {
+      gap: 42px;
+
+      .newsletter,
+      .social {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .newsletter {
+        .subscribe {
+          gap: 8px;
+          input {
+            font-size: 18px;
+            padding: 10px;
+            width: 280px;
+          }
+
+          button {
+            font-size: 18px;
+            padding: 10px 24px;
+          }
+        }
+      }
+      .social {
+        .icons {
+          gap: 20px;
+          img {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    padding: 28px 112px;
+    font-size: 16px;
+    text-align: left;
+  }
+}
