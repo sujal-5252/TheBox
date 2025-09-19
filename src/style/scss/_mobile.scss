@@ -13,6 +13,94 @@
     margin: 0;
 }
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
 /* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
     html {
@@ -74,6 +162,15 @@ h6 {
 #root,
 #__next {
     isolation: isolate;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+
+    img {
+        border: 0;
+    }
 }
 
 * {
@@ -180,6 +277,10 @@ header {
                 &:first-child {
                     border-right: white solid 2px;
                 }
+
+                &:hover {
+                    background-color: #000000;
+                }
             }
         }
     }
@@ -211,6 +312,8 @@ header {
         .card {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            text-align: center;
             gap: 12px;
             border: $neutral-100 solid 1.4px;
             padding: 24px;
@@ -235,7 +338,8 @@ header {
 .about-us {
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    align-items: center;
+    padding: 24px 40px;
     gap: 32px;
     background-color: $primary-color;
     color: white;
@@ -249,6 +353,7 @@ header {
         display: flex;
         flex-direction: column;
         gap: 12px;
+        text-align: center;
     }
 
     button {
@@ -265,7 +370,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 28px;
-    padding: 24px;
+    padding: 24px 48px;
 
     .heading {
         font-weight: bold;
@@ -281,12 +386,14 @@ header {
         align-items: center;
 
         .card {
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 18px;
-            padding: 20px 60px;
+            padding: 20px;
             background-color: white;
             box-shadow: 0px 0px 37px -2px rgba(17, 24, 39, 0.05);
             border-radius: 4px;
@@ -318,6 +425,7 @@ header {
     padding: 32px;
 
     .right {
+        text-align: center;
         display: flex;
         flex-direction: column;
         gap: 32px;
@@ -335,6 +443,11 @@ header {
             background-color: $primary-color;
             color: white;
             padding: 16px;
+
+            &:hover {
+                background-color: #000000;
+                color: #ffffff;
+            }
         }
     }
 
@@ -344,6 +457,7 @@ header {
         justify-content: center;
         align-items: center;
         gap: 28px;
+        padding: 40px 0px;
         .card {
             padding: 12px;
             position: relative;
@@ -425,13 +539,14 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
 
     .left {
         display: flex;
         flex-direction: column;
         gap: 24px;
         .upper-text {
-            font-size: x-large;
+            font-size: large;
             font-weight: bold;
         }
     }
@@ -441,6 +556,11 @@ header {
             background-color: transparent;
             border: white solid 2px;
             padding: 16px;
+
+            &:hover {
+                background-color: $primary-color;
+                color: white;
+            }
         }
     }
 }
@@ -455,6 +575,7 @@ header {
         font-size: x-large;
         font-weight: bold;
         color: $neutral-800;
+        text-align: center;
     }
 
     .main {
@@ -483,6 +604,7 @@ header {
             gap: 24px;
 
             .cards {
+                text-align: center;
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
@@ -532,6 +654,11 @@ header {
                     color: white;
                     padding: 10px;
                     font-size: small;
+
+                    &:hover {
+                        background-color: black;
+                        color: white;
+                    }
                 }
             }
         }
@@ -602,7 +729,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 22px;
-    padding: 32px;
+    padding: 24px;
 
     .logo {
         display: flex;
@@ -639,6 +766,7 @@ footer {
                 border: $neutral-100 solid 2px;
                 padding: 8px 0px 8px 8px;
                 color: $neutral-400;
+                border-radius: 4px;
             }
             button {
                 background-color: $secondary-color;
@@ -664,4 +792,5 @@ footer {
     padding: 24px;
     background-color: $primary-color;
     color: #ffffff;
+    text-align: center;
 }

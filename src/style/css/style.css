@@ -11,6 +11,94 @@
   margin: 0;
 }
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
 /* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
   html {
@@ -72,6 +160,14 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+a img {
+  border: 0;
 }
 
 * {
@@ -167,6 +263,9 @@ header nav .menu-icon:hover + .nav-items {
 .hero .feature-projects .buttons button:first-child {
   border-right: white solid 2px;
 }
+.hero .feature-projects .buttons button:hover {
+  background-color: #000000;
+}
 
 .reputation-section {
   display: flex;
@@ -192,6 +291,8 @@ header nav .menu-icon:hover + .nav-items {
 .reputation-section .cards .card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 12px;
   border: #eff0ef solid 1.4px;
   padding: 24px;
@@ -212,7 +313,8 @@ header nav .menu-icon:hover + .nav-items {
 .about-us {
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  align-items: center;
+  padding: 24px 40px;
   gap: 32px;
   background-color: #2947a9;
   color: white;
@@ -225,6 +327,7 @@ header nav .menu-icon:hover + .nav-items {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  text-align: center;
 }
 .about-us button {
   padding: 12px;
@@ -239,7 +342,7 @@ header nav .menu-icon:hover + .nav-items {
   justify-content: center;
   align-items: center;
   gap: 28px;
-  padding: 24px;
+  padding: 24px 48px;
 }
 .services .heading {
   font-weight: bold;
@@ -254,12 +357,14 @@ header nav .menu-icon:hover + .nav-items {
   align-items: center;
 }
 .services .cards .card {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 18px;
-  padding: 20px 60px;
+  padding: 20px;
   background-color: white;
   box-shadow: 0px 0px 37px -2px rgba(17, 24, 39, 0.05);
   border-radius: 4px;
@@ -287,6 +392,7 @@ header nav .menu-icon:hover + .nav-items {
   padding: 32px;
 }
 .experience .right {
+  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -305,12 +411,17 @@ header nav .menu-icon:hover + .nav-items {
   color: white;
   padding: 16px;
 }
+.experience .right button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
 .experience .left {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
   gap: 28px;
+  padding: 40px 0px;
 }
 .experience .left .card {
   padding: 12px;
@@ -384,6 +495,7 @@ header nav .menu-icon:hover + .nav-items {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
 }
 .consultation .left {
   display: flex;
@@ -391,7 +503,7 @@ header nav .menu-icon:hover + .nav-items {
   gap: 24px;
 }
 .consultation .left .upper-text {
-  font-size: x-large;
+  font-size: large;
   font-weight: bold;
 }
 .consultation .right button {
@@ -399,6 +511,10 @@ header nav .menu-icon:hover + .nav-items {
   background-color: transparent;
   border: white solid 2px;
   padding: 16px;
+}
+.consultation .right button:hover {
+  background-color: #2947a9;
+  color: white;
 }
 
 .projects {
@@ -411,6 +527,7 @@ header nav .menu-icon:hover + .nav-items {
   font-size: x-large;
   font-weight: bold;
   color: #292e3d;
+  text-align: center;
 }
 .projects .main {
   display: flex;
@@ -437,6 +554,7 @@ header nav .menu-icon:hover + .nav-items {
   gap: 24px;
 }
 .projects .main .right .cards {
+  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -481,6 +599,10 @@ header nav .menu-icon:hover + .nav-items {
   color: white;
   padding: 10px;
   font-size: small;
+}
+.projects .main .right .page-selector button:hover {
+  background-color: black;
+  color: white;
 }
 
 .contact {
@@ -540,7 +662,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 22px;
-  padding: 32px;
+  padding: 24px;
 }
 footer .logo {
   display: flex;
@@ -575,6 +697,7 @@ footer .right .subscribe input {
   border: #eff0ef solid 2px;
   padding: 8px 0px 8px 8px;
   color: #858ead;
+  border-radius: 4px;
 }
 footer .right .subscribe button {
   background-color: #f9995d;
@@ -595,6 +718,7 @@ footer .right .social .icons img {
   padding: 24px;
   background-color: #2947a9;
   color: #ffffff;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -670,6 +794,8 @@ footer .right .social .icons img {
   .reputation-section .cards .card {
     gap: 18px;
     padding: 20px 20px 40px 20px;
+    align-items: start;
+    text-align: left;
   }
   .reputation-section .cards .card img.logo {
     width: 37px;
@@ -696,12 +822,14 @@ footer .right .social .icons img {
     width: 33%;
     padding: 50px 60px 60px 40px;
     right: 112px;
+    align-items: start;
   }
   .about-section .about-us .heading {
     font-size: 36px;
   }
   .about-section .about-us .content {
     font-size: 20px;
+    text-align: left;
   }
   .about-section .about-us button {
     width: 60%;
@@ -710,6 +838,10 @@ footer .right .social .icons img {
     border: none;
     margin-top: 37px;
     padding: 16px 20px;
+  }
+  .about-section .about-us button:hover {
+    background-color: black;
+    color: white;
   }
   .services {
     padding: 44px 216px 76px 216px;
@@ -725,7 +857,8 @@ footer .right .social .icons img {
     row-gap: 48px;
   }
   .services .cards .card {
-    padding: 38px 72px;
+    width: 270px;
+    padding: 38px;
   }
   .services .cards .card img.logo {
     height: 40px;
@@ -800,6 +933,7 @@ footer .right .social .icons img {
   }
   .experience .right {
     gap: 50px;
+    text-align: left;
   }
   .experience .right .heading {
     font-size: 60px;
@@ -816,6 +950,7 @@ footer .right .social .icons img {
     flex-direction: row;
     justify-content: space-between;
     padding: 112px;
+    text-align: left;
   }
   .consultation .left {
     gap: 30px;
@@ -835,6 +970,7 @@ footer .right .social .icons img {
   }
   .projects .heading {
     font-size: 36px;
+    text-align: left;
   }
   .projects .main {
     flex-direction: row;
@@ -851,6 +987,9 @@ footer .right .social .icons img {
   .projects .main .right .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .projects .main .right .cards .card {
+    text-align: left;
   }
   .projects .main .right .cards .card img {
     width: 384px;
@@ -920,6 +1059,10 @@ footer .right .social .icons img {
     font-size: 18px;
     font-weight: 600;
   }
+  .contact .contact-form button:hover {
+    background-color: black;
+    color: white;
+  }
   footer {
     padding: 85px 112px;
     flex-direction: row;
@@ -977,6 +1120,7 @@ footer .right .social .icons img {
   .copyright {
     padding: 28px 112px;
     font-size: 16px;
+    text-align: left;
   }
 }
 
